@@ -15,6 +15,8 @@ RUN echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | tee /etc/ap
 
 ENV HOME /home/jenkins
 
+RUN touch /.dockerenv 
+
 RUN addgroup --system --gid 1000 jenkins
 RUN adduser --system --uid 1000 --home $HOME --ingroup jenkins jenkins
 
